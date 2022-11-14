@@ -1,1 +1,2 @@
 # rocketMission
+Project setup

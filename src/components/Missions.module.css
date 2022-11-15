@@ -1,0 +1,24 @@
+.table {
+  font-family: 'Poppins', sans-serif;
+  border-collapse: collapse;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.w15{
+  width: 15%;
+}
+
+.w55{
+  width: 55%;
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}

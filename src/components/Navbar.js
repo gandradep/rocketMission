@@ -6,14 +6,30 @@ const Navbar = () => {
   const activeLink = 'activeLink';
   const normalLink = '';
   return (
-    <nav>
+    <nav className="dFlex justify_between w-full items-center nav">
       <div>
-        <h1>
-          <img src={logo} alt="Logo" />
+        <h1 className="dFlex items-center">
+          <img src={logo} alt="Logo" className="logo-img" />
           Space Traveler&apos;s Hub
         </h1>
       </div>
-      <ul className="menuLinks">
+      <ul className="menuLinks dFlex">
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          >
+            Rockets
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/missions"
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          >
+            Missions
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="/myprofile"

@@ -14,10 +14,32 @@ a:visited {
   display: flex;
 }
 
+.justify_between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .menuLinks {
   list-style: none;
+  column-gap: 10px;
 }
 
 .activeLink {
   text-decoration: underline;
+}
+
+.nav {
+  padding: 20px 40px;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+.logo-img {
+  width: 60px;
 }

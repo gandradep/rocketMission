@@ -4,13 +4,17 @@ import { fetchRockets } from '../redux/rocketAction';
 import RocketItem from './RocketItem';
 import classes from './Rocket.module.css';
 
+let retrieveOnce = true;
 const RocketPage = () => {
   const rockets = useSelector((state) => state.rocket, shallowEqual);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
+    if (retrieveOnce) {
+      dispatch(fetchRockets());
+      retrieveOnce = false;
+    }
   }, [dispatch]);
 
   return (

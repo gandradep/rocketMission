@@ -1,9 +1,9 @@
-/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions } from '../redux/missions/missions';
 import classes from './Missions.module.css';
 import Mission from './Mission';
+
 let fetchonce = true;
 
 const MissionsPage = () => {
@@ -13,19 +13,20 @@ const MissionsPage = () => {
   useEffect(() => {
     if (fetchonce) {
       dispatch(getMissions());
-        fetchonce = false;
+      fetchonce = false;
     }
-
   }, []);
   return (
     <div>
-      <table className={`${classes.table} w-full `}>
+      <table
+        className={`${classes.table} w-full `}
+      >
         <thead>
-          <tr className={classes.paddRow}>
-            <th className={`${classes.w15} ${classes.border}`}>Mission</th>
-            <th className={`${classes.w55} ${classes.border}`}>Description</th>
-            <th className={`${classes.w15} ${classes.border}`}>Status</th>
-            <th className={`${classes.w15} ${classes.border}`}></th>
+          <tr id="rowTitle">
+            <th className={`${classes.w15} ${classes.border} ${classes.textLeft}`}>Mission</th>
+            <th className={`${classes.w55} ${classes.border} ${classes.textLeft}`}>Description</th>
+            <th className={`${classes.w15} ${classes.border} ${classes.textLeft}`}>Status</th>
+            <th className={`${classes.w15} ${classes.border} ${classes.colorWhite}`}>.</th>
           </tr>
         </thead>
         <tbody>

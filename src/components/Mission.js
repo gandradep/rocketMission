@@ -8,7 +8,7 @@ const Mission = (props) => {
   const { name, description } = props;
   return (
     <tr>
-      <td className={`${classes.border} ${classes.bold}`}>{name}</td>
+      <td className={`${classes.border} ${classes.bold} ${classes.verticalTop}`}>{name}</td>
       <td className={classes.border}>{description}</td>
       <td className={`${classes.border} ${classes.center}`}>
         <MissionBadge />

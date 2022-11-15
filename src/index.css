@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #1322dd;
+}
+
+.dFlex {
+  display: flex;
+}
+
+.menuLinks {
+  list-style: none;
+}
+
+.activeLink {
+  text-decoration: underline;
+}

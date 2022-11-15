@@ -5,6 +5,8 @@
 
 .border {
   border: 1px solid black;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .w15{

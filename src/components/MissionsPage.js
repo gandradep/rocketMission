@@ -21,7 +21,7 @@ const MissionsPage = () => {
     <div>
       <table className={`${classes.table} w-full `}>
         <thead>
-          <tr>
+          <tr className={classes.paddRow}>
             <th className={`${classes.w15} ${classes.border}`}>Mission</th>
             <th className={`${classes.w55} ${classes.border}`}>Description</th>
             <th className={`${classes.w15} ${classes.border}`}>Status</th>

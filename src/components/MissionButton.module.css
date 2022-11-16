@@ -1,10 +1,18 @@
 .badge {
-  background-color: #888;
   border: none;
   font-weight: bold;
   color: white;
-  padding: 4px 8px;
+  padding: 6px 10px;
   border-radius: 4px;
+  font-size: 1rem;
+}
+
+.bgGray {
+  background-color: #888;
+}
+
+.bgBlue {
+  background-color: #198dba;
 }
 
 .button {
@@ -20,5 +28,5 @@
 }
 
 .red {
-  color: red;
+  color: #e61919db;
 }

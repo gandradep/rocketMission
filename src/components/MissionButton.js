@@ -2,13 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import classes from './MissionButton.module.css';
-import { joinMission } from '../redux/missions/missions';
+import { joinMission, leaveMission } from '../redux/missions/missions';
 
 const MissionButton = (props) => {
   const { id, reserved } = props;
   const dispatch = useDispatch();
   const joinMissionHandler = (e) => {
     dispatch(joinMission(e.target.id));
+  };
+  const leaveMissionHandler = (e) => {
+    dispatch(leaveMission(e.target.id));
   };
   if (reserved) {
     return (
@@ -17,7 +20,7 @@ const MissionButton = (props) => {
           id={id}
           type="button"
           className={`${classes.button} ${classes.red}`}
-          onClick={joinMissionHandler}
+          onClick={leaveMissionHandler}
         >
           Leave Mission
         </button>

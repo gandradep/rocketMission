@@ -15,6 +15,11 @@ export const joinMission = (id) => ({
   id,
 });
 
+export const leaveMission = (id) => ({
+  type: LEAVE_MISSION,
+  id,
+});
+
 export const getMissions = createAsyncThunk(
   'missions/getMissions',
   async (_, thunkApi) => {
@@ -57,7 +62,16 @@ const missionsReducer = (state = [0], action) => {
         }
         return { ...mission, reserved: true };
       });
-      console.log(newState[0]);
+      return [
+        ...newState,
+      ];
+    case LEAVE_MISSION:
+      newState = state.map((mission) => {
+        if (mission.id !== action.id) {
+          return mission;
+        }
+        return { ...mission, reserved: false };
+      });
       return [
         ...newState,
       ];

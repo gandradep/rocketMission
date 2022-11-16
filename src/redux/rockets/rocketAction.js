@@ -12,7 +12,6 @@ const rocketList = [];
 
 const rocketReducer = (state = rocketList, action) => {
   const { type, payload } = action;
-  console.log(payload, type);
   switch (type) {
     case 'rocket-store/rockets/FETCH_ROCKETS/fulfilled':
       return payload.rockets;

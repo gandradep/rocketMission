@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import classes from './RocketButtons.module.css';
@@ -19,7 +20,6 @@ const ReserveBtn = (props) => {
 
   // eslint-disable-next-line react/prop-types
   const { children, id, reserved } = props;
-  console.log(props);
 
   return (
     <button

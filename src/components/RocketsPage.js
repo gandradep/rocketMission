@@ -7,7 +7,6 @@ import classes from './Rocket.module.css';
 let retrieveOnce = true;
 const RocketPage = () => {
   const rockets = useSelector((state) => state.rocket, shallowEqual);
-  console.log(rockets);
 
   const dispatch = useDispatch();
 

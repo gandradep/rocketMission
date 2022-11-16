@@ -14,10 +14,8 @@ const RocketItem = (props) => {
       </div>
       <div className={classes.rocket_description}>
         <h3 className={classes.rocket_name}>{name}</h3>
-        <p>
-          {reserved ? <RocketBadge /> : ''}
-          {description}
-        </p>
+        {reserved ? <RocketBadge /> : ''}
+        <p>{description}</p>
         {!reserved && (
           <ReserveBtn id={id} reserved={reserved}>
             Reserve Rocket

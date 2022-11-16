@@ -5,16 +5,24 @@ import MissionButton from './MissionButton';
 import classes from './Missions.module.css';
 
 const Mission = (props) => {
-  const { name, description } = props;
+  const { name, description, id } = props;
   return (
     <tr>
-      <td className={`${classes.border} ${classes.bold} ${classes.verticalTop}`}>{name}</td>
+      <td
+        className={`${classes.border} ${classes.bold} ${classes.verticalTop}`}
+      >
+        {name}
+        {id}
+      </td>
       <td className={classes.border}>{description}</td>
       <td className={`${classes.border} ${classes.center}`}>
         <MissionBadge />
       </td>
       <td className={`${classes.border} ${classes.center}`}>
-        <MissionButton />
+        <MissionButton
+          id={id}
+          name="button"
+        />
       </td>
     </tr>
   );
@@ -22,6 +30,7 @@ const Mission = (props) => {
 Mission.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Mission;

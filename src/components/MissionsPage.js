@@ -4,18 +4,19 @@ import { getMissions } from '../redux/missions/missions';
 import classes from './Missions.module.css';
 import Mission from './Mission';
 
-let fetchonce = true;
+let fetchOnce = true;
 
 const MissionsPage = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions);
 
   useEffect(() => {
-    if (fetchonce) {
+    if (fetchOnce) {
       dispatch(getMissions());
-      fetchonce = false;
+      fetchOnce = false;
     }
-  }, []);
+  }, [dispatch]);
+
   return (
     <div>
       <table
@@ -32,8 +33,9 @@ const MissionsPage = () => {
         <tbody>
           {missions?.map((mission) => (
             <Mission
-              key={mission.mission_id}
-              name={mission.mission_name}
+              key={mission.id}
+              id={mission.id}
+              name={mission.name}
               description={mission.description}
             />
           ))}

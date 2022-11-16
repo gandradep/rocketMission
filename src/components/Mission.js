@@ -23,9 +23,7 @@ const Mission = (props) => {
     </tr>
   );
 };
-Mission.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
+Mission.propTypes = { name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired };
 
 export default Mission;

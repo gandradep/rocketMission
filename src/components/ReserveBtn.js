@@ -11,11 +11,12 @@ const ReserveBtn = (props) => {
   };
 
   // eslint-disable-next-line react/prop-types
-  const { children, id } = props;
+  const { children, id, reserved } = props;
+  console.log(props);
 
   return (
     <button
-      className={classes.btn}
+      className={`${reserved ? classes.cancelBtn : classes.btn}`}
       type="button"
       onClick={() => {
         removeHandler(id);

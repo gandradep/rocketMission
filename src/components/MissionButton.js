@@ -3,10 +3,7 @@ import classes from './MissionButton.module.css';
 
 const MissionButton = () => (
   <div>
-    <button
-      type="button"
-      className={classes.button}
-    >
+    <button type="button" className={classes.button}>
       Join Mision
     </button>
   </div>

@@ -8,7 +8,11 @@ const Mission = (props) => {
   const { name, description } = props;
   return (
     <tr>
-      <td className={`${classes.border} ${classes.bold} ${classes.verticalTop}`}>{name}</td>
+      <td
+        className={`${classes.border} ${classes.bold} ${classes.verticalTop}`}
+      >
+        {name}
+      </td>
       <td className={classes.border}>{description}</td>
       <td className={`${classes.border} ${classes.center}`}>
         <MissionBadge />
@@ -19,9 +23,7 @@ const Mission = (props) => {
     </tr>
   );
 };
-Mission.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
+Mission.propTypes = { name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired };
 
 export default Mission;

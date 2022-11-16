@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
-import { fetchRockets } from '../redux/rocketAction';
+import { fetchRockets } from '../redux/rockets/rocketAction';
 import RocketItem from './RocketItem';
 import classes from './Rocket.module.css';
 
@@ -24,8 +24,10 @@ const RocketPage = () => {
           <RocketItem
             image={rocket.image}
             key={rocket.id}
+            id={rocket.id}
             name={rocket.name}
             description={rocket.description}
+            reserved={rocket.reserved}
           />
         ))}
       </li>

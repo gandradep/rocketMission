@@ -1,7 +1,10 @@
+/* eslint-disable object-curly-newline */
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const FETCH_ROCKETS = 'rocket-store/rockets/FETCH_ROCKETS';
+const REMOVE_ROCKET = 'rocket-store/rockets/REMOVE_ROCKET';
+const CANCEL_RESERVED = 'rocket-store/rockets/CANCEL_RESERVED';
 
 const API_URL = 'https://api.spacexdata.com/v3/rockets';
 
@@ -12,6 +15,22 @@ const rocketReducer = (state = rocketList, action) => {
   switch (type) {
     case 'rocket-store/rockets/FETCH_ROCKETS/fulfilled':
       return payload.rockets;
+
+    case 'rocket-store/rockets/REMOVE_ROCKET/fulfilled':
+      return state.map((rocket) => {
+        if (rocket.id === payload.id) {
+          return { ...rocket, reserved: true };
+        }
+        return rocket;
+      });
+
+    case 'rocket-store/rockets/CANCEL_RESERVED/fulfilled':
+      return state.map((rocket) => {
+        if (rocket.id === payload.id) {
+          return { ...rocket, reserved: false };
+        }
+        return rocket;
+      });
 
     default:
       return state;
@@ -33,5 +52,14 @@ export const fetchRockets = createAsyncThunk(FETCH_ROCKETS, async () => {
     })),
   };
 });
+
+export const removeRocket = createAsyncThunk(REMOVE_ROCKET, async (id) => ({
+  id,
+}));
+
+export const cancelReservedRocket = createAsyncThunk(
+  CANCEL_RESERVED,
+  async (id) => ({ id }),
+);
 
 export default rocketReducer;

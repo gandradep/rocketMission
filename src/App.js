@@ -13,7 +13,7 @@ function App() {
         <header className="dFlex">
           <Navbar />
         </header>
-        <section>
+        <section className="padSection">
           <Routes>
             <Route path="/" element={<RocketPage />} />
             <Route path="/missions" element={<MissionsPage />} />

@@ -43,3 +43,15 @@ a:visited {
 .logo-img {
   width: 60px;
 }
+
+.padSection {
+  padding: 10px 20px;
+}
+
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+#rowTitle {
+  background-color: white;
+}

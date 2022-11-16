@@ -10,11 +10,12 @@ const fetchMissions = (data) => ({
 
 export const getMissions = createAsyncThunk(
   'missions/getMissions',
-  async (_, thunkApi) => fetch(urlApi)
-    .then((response) => response.json())
-    .then((data) => {
-      thunkApi.dispatch(fetchMissions(data));
-    }),
+  async (_, thunkApi) =>
+    fetch(urlApi)
+      .then((response) => response.json())
+      .then((data) => {
+        thunkApi.dispatch(fetchMissions(data));
+      }),
 );
 const missionsReducer = (state = [0], action) => {
   const missionList = [];
@@ -28,9 +29,7 @@ const missionsReducer = (state = [0], action) => {
         };
         missionList.push(missionData);
       });
-      return [
-        ...missionList,
-      ];
+      return [...missionList];
     default:
       return state;
   }

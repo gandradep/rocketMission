@@ -18,15 +18,29 @@ const MissionsPage = () => {
   }, []);
   return (
     <div>
-      <table
-        className={`${classes.table} w-full `}
-      >
+      <table className={`${classes.table} w-full `}>
         <thead>
           <tr id="rowTitle">
-            <th className={`${classes.w15} ${classes.border} ${classes.textLeft}`}>Mission</th>
-            <th className={`${classes.w55} ${classes.border} ${classes.textLeft}`}>Description</th>
-            <th className={`${classes.w15} ${classes.border} ${classes.textLeft}`}>Status</th>
-            <th className={`${classes.w15} ${classes.border} ${classes.colorWhite}`}>.</th>
+            <th
+              className={`${classes.w15} ${classes.border} ${classes.textLeft}`}
+            >
+              Mission
+            </th>
+            <th
+              className={`${classes.w55} ${classes.border} ${classes.textLeft}`}
+            >
+              Description
+            </th>
+            <th
+              className={`${classes.w15} ${classes.border} ${classes.textLeft}`}
+            >
+              Status
+            </th>
+            <th
+              className={`${classes.w15} ${classes.border} ${classes.colorWhite}`}
+            >
+              .
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -38,7 +52,6 @@ const MissionsPage = () => {
             />
           ))}
         </tbody>
-
       </table>
     </div>
   );

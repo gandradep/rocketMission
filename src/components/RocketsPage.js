@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
-import { fetchRockets } from '../redux/rocketAction';
+import { fetchRockets } from '../redux/rockets/rocketAction';
 import RocketItem from './RocketItem';
 import classes from './Rocket.module.css';
 
 let retrieveOnce = true;
 const RocketPage = () => {
   const rockets = useSelector((state) => state.rocket, shallowEqual);
+  console.log(rockets);
 
   const dispatch = useDispatch();
 
@@ -24,6 +25,7 @@ const RocketPage = () => {
           <RocketItem
             image={rocket.image}
             key={rocket.id}
+            id={rocket.id}
             name={rocket.name}
             description={rocket.description}
           />

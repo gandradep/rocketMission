@@ -4,7 +4,7 @@ import ReserveBtn from './ReserveBtn';
 
 const RocketItem = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { image, name, description } = props;
+  const { image, name, description, id } = props;
 
   return (
     <div className={`${classes.items} dFlex`}>
@@ -14,7 +14,7 @@ const RocketItem = (props) => {
       <div className={classes.rocket_description}>
         <h3 className={classes.rocket_name}>{name}</h3>
         <p>{description}</p>
-        <ReserveBtn>Reserve Rocket</ReserveBtn>
+        <ReserveBtn id={id}>Reserve Rocket</ReserveBtn>
       </div>
     </div>
   );

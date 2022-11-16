@@ -1,0 +1,22 @@
+.rocket_img {
+  width: 280px;
+}
+
+.list {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.rocket_description {
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.rocket_name {
+  font-size: 25px;
+  margin: 0;
+}
+
+.items {
+  margin-bottom: 30px;
+}

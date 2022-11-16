@@ -42,9 +42,11 @@ const missionsReducer = (state = [0], action) => {
           id: item.mission_id,
           name: item.mission_name,
           description: item.description,
+          reserved: false,
         };
         missionList.push(missionData);
       });
+      console.log(missionList[0]);
       return [
         ...missionList,
       ];

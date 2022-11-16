@@ -5,18 +5,31 @@ import classes from './MissionButton.module.css';
 import { joinMission } from '../redux/missions/missions';
 
 const MissionButton = (props) => {
-  const { id } = props;
+  const { id, reserved } = props;
   const dispatch = useDispatch();
   const joinMissionHandler = (e) => {
     dispatch(joinMission(e.target.id));
   };
-
+  if (reserved) {
+    return (
+      <div>
+        <button
+          id={id}
+          type="button"
+          className={`${classes.button} ${classes.red}`}
+          onClick={joinMissionHandler}
+        >
+          Leave Mission
+        </button>
+      </div>
+    );
+  }
   return (
     <div>
       <button
         id={id}
         type="button"
-        className={classes.button}
+        className={`${classes.button} ${classes.gray}`}
         onClick={joinMissionHandler}
       >
         Join Mission
@@ -27,6 +40,7 @@ const MissionButton = (props) => {
 
 MissionButton.propTypes = {
   id: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default MissionButton;

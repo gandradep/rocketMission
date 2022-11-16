@@ -1,17 +1,32 @@
 .badge {
-  background-color: #888;
   border: none;
   font-weight: bold;
   color: white;
-  padding: 4px 8px;
+  padding: 6px 10px;
   border-radius: 4px;
+  font-size: 1rem;
+}
+
+.bgGray {
+  background-color: #888;
+}
+
+.bgBlue {
+  background-color: #198dba;
 }
 
 .button {
   background-color: white;
-  border: 2px solid #888;
-  color: #888;
+  border: 2px solid;
   padding: 8px 15px;
   font-size: 1.2rem;
   border-radius: 4px;
+}
+
+.gray {
+  color: #888;
+}
+
+.red {
+  color: #e61919db;
 }

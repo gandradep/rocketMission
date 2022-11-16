@@ -29,14 +29,6 @@ export const getMissions = createAsyncThunk(
   },
 );
 
-// export const getMissions = createAsyncThunk(
-//   'missions/getMissions',
-//   async (_, thunkApi) => fetch(urlApi)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       thunkApi.dispatch(fetchMissions(data));
-//     }),
-// );
 const missionsReducer = (state = [0], action) => {
   const missionList = [];
   let newState = [];
@@ -51,7 +43,6 @@ const missionsReducer = (state = [0], action) => {
         };
         missionList.push(missionData);
       });
-      console.log(missionList[0]);
       return [
         ...missionList,
       ];

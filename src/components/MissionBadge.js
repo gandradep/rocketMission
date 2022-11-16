@@ -26,4 +26,5 @@ const MissionBadge = (props) => {
 MissionBadge.propTypes = {
   reserved: PropTypes.bool.isRequired,
 };
+
 export default MissionBadge;

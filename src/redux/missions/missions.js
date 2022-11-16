@@ -5,10 +5,8 @@ const JOIN_MISSION = 'rocketMission/missions/JOIN_MISSION';
 const LEAVE_MISSION = 'rocketMission/missions/LEAVE_MISSION';
 const urlApi = 'https://api.spacexdata.com/v3/missions';
 
-const fetchMissions = (data) => ({
-  type: MISSIONS_FETCHED,
-  data,
-});
+const fetchMissions = (data) => ({ type: MISSIONS_FETCHED,
+  data });
 
 export const joinMission = (id) => ({
   type: JOIN_MISSION,

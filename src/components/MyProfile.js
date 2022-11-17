@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import RocketProfile from './RocketProfile';
 
 const MyProfile = () => {
   const missions = useSelector((state) => state.missions);
@@ -14,8 +15,12 @@ const MyProfile = () => {
           ))}
         </ul>
       </div>
+      <div className="rocket">
+        <RocketProfile />
+      </div>
     </div>
   );
-};
+}; 
+
 
 export default MyProfile;

@@ -6,16 +6,16 @@ const MyProfile = () => {
   const missions = useSelector((state) => state.missions);
   const joinMission = missions.filter((item) => item.reserved === true);
   return (
-    <div>
-      <div className="joinMission">
-        <h3>My Missions</h3>
+    <div className="dFlex w-full myProfile">
+      <div className="joinMission w-40">
+        <h3 className="profileTitle">My Missions</h3>
         <ul>
           {joinMission?.map((mission) => (
-            <li key={mission.id}>{mission.name}</li>
+            <li className="border" key={mission.id}>{mission.name}</li>
           ))}
         </ul>
       </div>
-      <div className="rocket">
+      <div className="rocket w-40">
         <RocketProfile />
       </div>
     </div>

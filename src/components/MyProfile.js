@@ -1,8 +1,11 @@
 import React from 'react';
+import RocketProfile from './RocketProfile';
 
 const MyProfile = () => (
   <div>
-    <p>Test</p>
+    <div className="rocket">
+      <RocketProfile />
+    </div>
   </div>
 );
 

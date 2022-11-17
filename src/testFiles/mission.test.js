@@ -40,4 +40,4 @@ describe('Missions components', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-})
+});

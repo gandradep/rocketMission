@@ -16,7 +16,6 @@ const MissionsPage = () => {
       fetchOnce = false;
     }
   }, [dispatch]);
-
   return (
     <div>
       <table className={`${classes.table} w-full `}>

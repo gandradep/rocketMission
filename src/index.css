@@ -11,6 +11,11 @@ a:visited {
   color: #1322dd;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+}
+
 .dFlex {
   display: flex;
 }
@@ -26,9 +31,11 @@ a:visited {
 .w-full {
   width: 100%;
 }
+.w-40 {
+  width: 40%;
+}
 
 .menuLinks {
-  list-style: none;
   column-gap: 10px;
 }
 
@@ -55,4 +62,19 @@ tr:nth-child(odd) {
 
 #rowTitle {
   background-color: white;
+}
+
+.profileTitle {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.border {
+  border: 1px solid #000;
+  padding: 5px 10px;
+}
+
+.myProfile {
+  justify-content: center;
+  column-gap: 50px;
 }

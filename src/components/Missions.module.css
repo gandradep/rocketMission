@@ -1,0 +1,40 @@
+.table {
+  font-family: 'Poppins', sans-serif;
+  border-collapse: collapse;
+}
+
+.border {
+  border: 1px solid black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.w15 {
+  width: 15%;
+}
+
+.w55 {
+  width: 55%;
+}
+
+.center {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.verticalTop {
+  vertical-align: top;
+  padding-left: 5px;
+}
+
+.colorWhite {
+  color: white;
+}
